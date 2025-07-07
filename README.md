@@ -39,7 +39,7 @@ from epg_python import simulate_tse, display_epg, plot_echoes
 alpha = 120      # Refocusing flip angle (degrees)
 N = 10          # Number of pulses
 esp = 10        # Echo spacing (ms)
-T1, T2 = 400, 100  # Relaxation times (ms)
+T1, T2 = 800, 100  # Relaxation times (ms)
 
 omega_store, echoes, sequence = simulate_tse(alpha, N, esp, True, (T1, T2))
 
