@@ -98,17 +98,35 @@ omega_store, echoes = simulator.simulate(seq)
 
 ## Demo Examples
 
-Run the comprehensive demo suite:
+### Quick Demo Runner
+
+Run the comprehensive demo suite using the included script:
 ```bash
-epg-demo
+python run_demo.py
 ```
 
-Or run individual demos:
+This script runs all available demonstrations including:
+- Basic TSE sequence simulation with EPG visualization
+- T2 parameter variation studies
+- Effective TE analysis
+- T2 mapping accuracy assessment
+- Flip angle bias analysis
+
+The demo will display multiple matplotlib windows - close each window to proceed to the next demonstration.
+
+### Individual Demos
+
+You can also run individual demos programmatically:
 ```python
 from epg_python.demo import demo_basic_tse, demo_t2_variation
 
 demo_basic_tse()        # Basic TSE simulation
 demo_t2_variation()     # T2 parameter study
+```
+
+### Command Line Demo (if installed)
+```bash
+epg-demo
 ```
 
 ## Theory Background
@@ -154,8 +172,8 @@ measured_t2_map, T2_values, esp_values = demo_t2_mapping()
 from epg_python import simulate_tse, simulate_gre, plot_sequence_comparison
 
 # Compare different sequences
-tse_results = simulate_tse(120, 10, 10, True, (400, 100))
-gre_results = simulate_gre(30, 10, 50, (400, 100))
+tse_results = simulate_tse(120, 10, 10, True, (800, 100))
+gre_results = simulate_gre(30, 10, 50, (800, 100))
 
 results_list = [
     (tse_results[1], "TSE α=120°"),
