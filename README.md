@@ -16,7 +16,7 @@ This package provides a comprehensive toolkit for simulating MRI pulse sequences
 
 ### From source
 ```bash
-git clone https://github.com/papomail/epg-python.git
+git clone https://github.com/papomail/EPG-simulation.git
 cd epg-python
 pip install -e .
 ```
